@@ -15,6 +15,7 @@ async function getData(){
         // Log the retrieved data to the console
         console.log(data);
         output.style.display = "block";
+        output.textContent = `average age ${data.age}, Total number of people with name ${personName} are ${data.count}`;
     }
     catch(error){
         console.log(error);
