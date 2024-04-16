@@ -21,3 +21,5 @@ async function getData(){
         console.log(error);
     }
 }
+
+submit.addEventListener("click", getData);
