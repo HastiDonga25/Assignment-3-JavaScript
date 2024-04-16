@@ -10,7 +10,11 @@ async function getData(){
         const personName = document.getElementById("name").value.toLowerCase();
         // Fetch data from the API using the entered name
         const response = await fetch(`https://api.agify.io/?name=${personName}`);
-        
+        // Extract JSON data from the response
+        const data = await response.json(); 
+        // Log the retrieved data to the console
+        console.log(data);
+        output.style.display = "block";
     }
     catch(error){
         console.log(error);
